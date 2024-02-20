@@ -68,3 +68,4 @@ husky - commit-msg script failed (code 1)
 # 链接
 
 [commitlint](https://commitlint.js.org/#/)
+[prettier](https://prettier.io/docs/en/)
