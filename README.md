@@ -59,3 +59,7 @@ git commit -m "foo: bar"
  ELIFECYCLE  Command failed with exit code 1.
 husky - commit-msg script failed (code 1)
 ```
+
+# 链接
+
+[commitlint](https://commitlint.js.org/#/)
