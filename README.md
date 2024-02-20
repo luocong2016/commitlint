@@ -1,3 +1,5 @@
+# git 提交规范
+
 1. 安装 `commitlint` 依赖
 
 ```sh
@@ -29,13 +31,16 @@ pnpm husky init
 npm pkg set scripts.commitlint="commitlint --edit"
 ```
 
-5. 创建 `.husky/commit-msg` 文件
+5. 创建 `.husky/commit-msg` 文件, 编码 `UTF-8`
+
+如果 `.husky` 文件夹不存在，执行以下代码
 
 ```sh
-## 如果 .husky 文件夹不存在，执行以下代码
+
 pnpm prepare
 ```
 
+创建 `.husky/commit-msg` 执行脚本
 ```sh
 pnpm commitlint
 ```
