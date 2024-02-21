@@ -1,5 +1,7 @@
 <template>
-  <div class="cls">{{ props.name }}</div>
+  <div class="cls" :style="{ color: 'red' }" width="250" height="100">
+    {{ props.name }}
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -13,7 +15,7 @@ const props = defineProps({
 })
 </script>
 
-<style lang="less" scope>
+<style scope lang="less">
 .cls {
   color: red;
 }
