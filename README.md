@@ -12,7 +12,7 @@ pnpm add -D @commitlint/cli @commitlint/config-conventional
 // commitlint.config.js
 
 module.exports = {
-  extends: ["@commitlint/config-conventional"],
+	extends: ['@commitlint/config-conventional']
 }
 ```
 
@@ -41,6 +41,7 @@ pnpm prepare
 ```
 
 创建 `.husky/commit-msg` 执行脚本
+
 ```sh
 pnpm commitlint
 ```
@@ -64,6 +65,10 @@ git commit -m "foo: bar"
  ELIFECYCLE  Command failed with exit code 1.
 husky - commit-msg script failed (code 1)
 ```
+
+# 插件干扰
+
+将默认格式化 Beautify -> perttier
 
 # 链接
 

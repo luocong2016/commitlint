@@ -3,14 +3,14 @@ module.exports = {
     'eslint:recommended',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
+    'prettier'
   ],
 
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 2019,
     sourceType: 'module',
-    extraFileExtensions: ['.vue'],
+    extraFileExtensions: ['.vue']
   },
 
   plugins: ['@typescript-eslint'],
@@ -19,7 +19,7 @@ module.exports = {
     es6: true,
     node: true,
     jest: true,
-    browser: true,
+    browser: true
   },
 
   rules: {
@@ -36,27 +36,24 @@ module.exports = {
     // typescript-eslint
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-    "prefer-object-spread": "off"
+    'prefer-object-spread': 'off'
   },
 
   overrides: [
     {
       files: ['*.vue'],
-      parser: require.resolve('vue-eslint-parser'),
+      parser: require.resolve('vue-eslint-parser')
     },
     {
       files: ['**/*.md/*.js', '**/*.md/*.ts'],
-      rules: {
-        '@typescript-eslint/no-unused-vars': 'off',
-      },
-    },
-  ],
-};
+      rules: {}
+    }
+  ]
+}

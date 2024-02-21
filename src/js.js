@@ -1,1 +1,1 @@
-export const name = "js.js"
+export const name = 'js.js'
