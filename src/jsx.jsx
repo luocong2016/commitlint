@@ -7,7 +7,8 @@ export default defineComponent({
       default: 'lutz'
     }
   },
+
   setup(props) {
-    return () => <div>{ props.name }</div>
+    return () => <div>{props.name}</div>
   }
 })
