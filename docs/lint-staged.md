@@ -11,3 +11,14 @@ pnpm i -D lint-staged
 ```sh
 npm pkg set scripts.precommit="lint-staged"
 ```
+
+## `package.json` 写入规则
+
+```json
+{
+	"lint-staged": {
+		"*.{html,css,less,scss,js,jsx,ts,tsx,vue,json,md}": ["prettier --write"],
+		"src/**/*.{js,jsx,ts,tsx,vue}": ["eslint --fix"]
+	}
+}
+```
