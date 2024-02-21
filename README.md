@@ -12,7 +12,7 @@ pnpm add -D @commitlint/cli @commitlint/config-conventional
 // commitlint.config.js
 
 module.exports = {
-	extends: ['@commitlint/config-conventional']
+  extends: ['@commitlint/config-conventional']
 }
 ```
 
