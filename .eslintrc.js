@@ -1,4 +1,10 @@
 module.exports = {
+  root: true,
+
+  globals: {
+    vi: true
+  },
+
   extends: [
     'eslint:recommended',
     'plugin:vue/vue3-recommended',
@@ -8,18 +14,25 @@ module.exports = {
 
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: 'module',
-    extraFileExtensions: ['.vue']
+    extraFileExtensions: ['.vue'],
+    ecmaFeatures: {
+      jsx: true,
+      tsx: true
+    }
   },
 
-  plugins: ['@typescript-eslint'],
+  parser: 'vue-eslint-parser',
+
+  plugins: ['vue', '@typescript-eslint'],
 
   env: {
     es6: true,
     node: true,
     jest: true,
-    browser: true
+    browser: true,
+    es2021: true
   },
 
   rules: {
@@ -36,15 +49,18 @@ module.exports = {
     // typescript-eslint
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+
     'prefer-object-spread': 'off'
   },
+
+  ignorePatterns: ['es', 'lib', 'node_modules'],
 
   overrides: [
     {
@@ -53,7 +69,22 @@ module.exports = {
     },
     {
       files: ['**/*.md/*.js', '**/*.md/*.ts'],
-      rules: {}
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off'
+      }
+    },
+    {
+      files: ['src/**/*'],
+      excludedFiles: ['**/test/*', '**/demo/*'],
+      rules: {
+        // since we target ES2015 for baseline support, we need to forbid object
+        // rest spread usage (both assign and destructure)
+        'no-restricted-syntax': [
+          'error',
+          'ObjectExpression > SpreadElement',
+          'ObjectPattern > RestElement'
+        ]
+      }
     }
   ]
 }
