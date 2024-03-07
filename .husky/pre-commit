@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # 检查是否存在 "--no-verify" 选项
-echo "1111111 $*"
+if [ $? -ne 0 ]; then
+  echo "You may use \`git push --no-verify\` to skip this check."
+  exit 1
+fi
 
 pnpm precommit
