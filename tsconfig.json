@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "baseUrl": ".",
     "jsx": "preserve",
     "jsxImportSource": "vue",
@@ -15,5 +16,5 @@
     "types": ["vue/jsx"]
   },
   "include": ["src/**/*"],
-  "exclude": ["**/node_modules", "**/.*/"]
+  "exclude": ["**/node_modules"]
 }
