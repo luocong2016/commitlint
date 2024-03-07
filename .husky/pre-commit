@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # 检查是否存在 "--no-verify" 选项
-echo "$*"
+echo "1111111 $*"
 
 pnpm precommit
