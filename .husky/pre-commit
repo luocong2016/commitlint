@@ -1,9 +1,4 @@
 #!/bin/bash
-
-# 检查是否存在 "--no-verify" 选项
-if [[ $* == *--no-verify* ]]; then
-  echo "ERROR: Cannot use 'git commit --no-verify' command. Please remove '--no-verify' option."
-  exit 1
-fi
+echo "Running pre-commit hook..."
 
 pnpm precommit
