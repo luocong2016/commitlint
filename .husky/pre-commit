@@ -1,5 +1,3 @@
 #!/bin/bash
 
-# 检查是否存在 "--no-verify" 选项
-
 pnpm precommit
