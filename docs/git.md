@@ -1,3 +1,10 @@
+# 提醒
+```sh
+# 防止绕过验证提交
+git commit -m "xxx: xxxxx" --no-verify
+```
+
+
 # commit 消息格式
 
 ```
