@@ -1,10 +1,5 @@
 #!/bin/bash
 
 # 检查是否存在 "--no-verify" 选项
- if [ $? -ne 0 ]; then
-  echo "Error running make check - please fix before committing"
-  echo "if this is a mistake you can skip the checks with 'git commit --no-verify'"
-  exit 0
-fi
 
 pnpm precommit
